@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --Color1-Det:#2F6673; /* Detalles */
+    --Color2-HyF:#0F4040; /* Header - Foother */
+    --Color3-Fondo:#F2E0D5; /* Fondo */
+    --Color4: white;
+    --Color5: #D9D9D9; /* Detalles 2*/
+  }
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+body {
+    font-family: 'Roboto', sans-serif;
+    width: calc(100vw - (100vw - 100%));
+    background-color: var(--Color3-Fondo);
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+    gap: 30px;
+}
+body main img {
+    width: 50%;
+    height: 50%;
+    border-radius: 8px;
+}
+body main a {
+    background-color: var(--Color1-Det);
+    border: solid 2px var(--Color1-Det);
+    border-radius: 8px;
+    color: white;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;                /* Para que el boton aplique a la lista y no solo al texto...  */
+    font-size: 16px;
+    transition: all .5s;            /* Delay de 0.5s para los efectos */
+}
+body main a:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}

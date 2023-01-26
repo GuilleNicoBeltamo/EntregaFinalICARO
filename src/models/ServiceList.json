@@ -1,0 +1,38 @@
+[
+    {
+      "id": "1",
+      "name": "servicio 1",
+      "desc": "descripción del servicio 1",
+      "price": 100
+    },
+    {
+      "id": "2",
+      "name": "servicio 2",
+      "desc": "descripción del servicio 2",
+      "price": 100
+    },
+    {
+      "id": "3",
+      "name": "servicio 3",
+      "desc": "descripción del servicio 3",
+      "price": 100
+    },
+    {
+      "id": "4",
+      "name": "servicio 1+2",
+      "desc": "descripción del servicio 1+1",
+      "price": 100
+    },
+    {
+      "id": "5",
+      "name": "servicio 1+2+3",
+      "desc": "descripción del servicio 1+2+3",
+      "price": 100
+    },
+    {
+      "id": "6",
+      "name": "servicio 1+2",
+      "desc": "descripción del servicio 1+1",
+      "price": 100
+    }
+  ]

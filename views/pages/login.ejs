@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login</title>
+    <link href="/css/login.css" rel="stylesheet" type="text/css">
+    <link href="/css/formulario.css" rel="stylesheet" type="text/css">
+    <link href="/css/header.css" rel="stylesheet" type="text/css">
+    <link href="/css/footer.css" rel="stylesheet" type="text/css">
+  </head>
+
+  <body>
+    <%- include('../partials/header.ejs') %> 
+    <main>
+      <section class="section" id="inicio">
+        <h1>DiPro Rex: Soluciones de diseño</h1>
+        <p> Hacemos posible tu idea </p>
+      </section>
+
+      <h1 class="welcome">¡Bienvenida/o!</h1>
+
+      <form action="/inicio-sesion" method="post">
+        <div>
+            <label for="user">Nombre de usuario</label>
+            <input id="user" name="user" type="text" placeholder="Nombre de usuario..."/>
+        </div>
+        <br>
+        <div>
+            <label for="password">Contraseña</label>
+            <input id="password" name="password" type="password" placeholder="Contraseña..."/>
+        </div>
+        <br>
+        <div>
+          <button type="submit">
+            Ingresar
+          </button>
+        </div>
+      </form>
+      
+
+    </main>
+
+    <%- include('../partials/footer.ejs') %> 
+    
+  </body>
+</html>

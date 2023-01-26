@@ -1,0 +1,20 @@
+[
+  {
+    "id": "14d3ea87-605e-45db-ae3e-d4c18e9fbd1d",
+    "user": "123",
+    "password": "$2b$10$lGMFkDZHn0ZkPsoWDrMR5eaDzNT4.gkrf1tkbsBBgMGzNjgGbpIn.",
+    "correo": "123"
+  },
+  {
+    "id": "db7791ab-0f42-47ea-8ebe-ba690243b11c",
+    "user": "ASD",
+    "password": "$2b$10$q3I68xvOvCUab/Gn70YvkO6q4hulAfMco22BfkW3VDtRYAHzr/nUC",
+    "correo": "ASD"
+  },
+  {
+    "id": "6ecff158-09cb-4c9e-bb1c-7ca790f25f70",
+    "user": "Amelia",
+    "password": "$2b$10$/qM6s7Tb7SCdSuWQzPCCp.VL6UyBM57L89op8kzg1v.vt1H4fwAo6",
+    "correo": "Ame@gmail.com"
+  }
+]

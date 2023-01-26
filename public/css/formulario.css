@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --Color1-Det:#2F6673; /* Detalles */
+    --Color2-HyF:#0F4040; /* Header - Foother */
+    --Color3-Fondo:#F2E0D5; /* Fondo */
+    --Color4: white;
+    --Color5: #D9D9D9; /* Detalles 2*/
+  }
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+body {
+    font-family: 'Roboto', sans-serif;
+    width: calc(100vw - (100vw - 100%));
+    background-color: var(--Color3-Fondo);
+}
+main {
+    height: 85vh;
+}
+.welcome {
+    text-align: center;
+    margin: 24px 24px;
+    color: var(--Color2-HyF);
+}
+
+    /*--- Main ---*/
+    .section {
+        padding: 16px 32px;
+    }
+    .section h1, .section h2 {
+        color: var(--Color2-HyF);
+        font-size: 32px;
+        text-align: center;
+    }
+    .section h1 {
+        background-color: aliceblue;
+        padding: 4px 24px;
+        border-radius: 12px;
+        font-size: 30px;
+
+    }
+    #inicio {
+        background-color: var(--Color1-Det);
+        display: flex;
+        flex-direction: column;
+        justify-content:flex-start;
+        align-items: center;
+        text-align: center;
+        height: 16vh;
+        background-image: url("/assets/3.jpeg");
+        background-attachment: fixed, scroll;
+        background-repeat: repeat, repeat-y;
+        gap: 20px;
+    }
+    #inicio p {
+        background-color: rgba(0,0,0,.5);
+        color: aliceblue;
+        border-radius: 8px;
+        padding: 16px 32px;
+    }
+
+main form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    gap: 8px;
+}
+main form div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    gap: 8px;
+}
+main form div label {
+    font-weight: bolder;
+    text-decoration: underline;
+    color: black;
+}
+
+body main button {
+    background-color: var(--Color1-Det);
+    border: solid 2px var(--Color1-Det);
+    border-radius: 8px;
+    color: white;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;                /* Para que el boton aplique a la lista y no solo al texto...  */
+    font-size: 16px;
+    transition: all .5s;            /* Delay de 0.5s para los efectos */
+}
+body main button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
