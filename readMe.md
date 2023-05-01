@@ -38,3 +38,9 @@ Los usuarios creados hasta el momento son los siguientes
 Id          userName    User (log in)   Contraseña hasheada                                             Correo          Pais
 0	        Admin	    Admin	        $2b$10$waSXt7v8B0iRR7OWWbPYKewrAjL3ZhgmrnyYOeCcWnHauZ9fz0LXW	Admin@Admin	    Admin
 82350766	Amelia	    Amelia	        $2b$10$kJ9Uiugxk2hlLviusgsaAeW0pMzyMeK2Gr5g0LUmNvq6nqUjTmXVK	Amelia@Amelia	Amelandia
+
+## Notas 
+- El e-commerce no tiene un contador de ítems seleccionados ya que la plataforma sirve como punto de comercialización de **servicios** y no de productos. Por esta razón, no tiene serntido hablar de cantidad. En lugar de esto se implementó una lógica mediante íconos, en la cual inicialmente todos los servicios ofrecidos tienen un ícono de un carrito con un signo +, al seleccionarlo y agregarlo al carrito, el ícono cambia a uno donde el carrito tiene un signo - en lugar del signo +, dando a entender que el servicio se "extrae" de la lista.
+- Los precios de los servicios son simbólicos.
+- Las imágenes presentes en la carpeta "assets" tienen relación directa con la lista de los 6 servicios mencionada mas arriba. En caso de crear un nuevo servicio, se tiene que agregar la imagen representativa en la carpeta "assets" siguiendo con la numeración.
+- Debido a que la cantidad de servicios que se prevee comercializar (6 de momento), el e-commerce no tiene una barra de búsqueda, ya que los servicios entran facilmente en una sola página sin necesidad de utilizar filtros.
