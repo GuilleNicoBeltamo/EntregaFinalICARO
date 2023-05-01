@@ -1,0 +1,10 @@
+PORT=8000
+NODE_ENV="development"
+SESSION_SECRET="Secreto_de_session"
+
+DB_NAME="usersDB"
+DB_USERNAME="root"
+DB_PASSWORD=""
+
+DB_Admin="Admin"
+DB_Pass="Admin"

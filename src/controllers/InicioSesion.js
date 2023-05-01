@@ -1,22 +1,21 @@
-const path = require("path");
-const fs = require("fs");
 const bcrypt = require("bcrypt");
+const UserList = require("../models/UserList");
 
 const sendSigninForm = (req,res) => {
     res.render("pages/login.ejs");
 };
 
-const getSigninData = (req,res)=>{
+const getSigninData = async (req,res) => {
     const { user, password } = req.body;
-    const file = fs.readFileSync(path.join(__dirname, "../models/user.json"));
-    let parsedFile = JSON.parse(file);
-    const existedUser = parsedFile.find(( usuario )=> usuario.user === user);
-    
+
+    const registredUsers = await UserList.findAll({ raw: true });
+    let existedUser = registredUsers.find((current) => current.user === user);
+
     if (!existedUser) {
         return res.render("pages/invalidUser.ejs");
     }
 
-    const validPassword = bcrypt.compareSync(password, existedUser.password);
+    const validPassword = bcrypt.compareSync(password, existedUser.hash);
     if (!validPassword) {
         return res.render("pages/invalidPass.ejs");
     }
@@ -24,7 +23,8 @@ const getSigninData = (req,res)=>{
     req.session.userID = existedUser.id;
     req.session.user = existedUser.user;
     req.session.save();
-    res.redirect(`/user/${existedUser.id}`);
+
+    res.redirect(`/user/${existedUser.id}`);    
 };
 
 module.exports = {

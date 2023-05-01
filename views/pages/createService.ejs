@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registro</title>
+    <link href="/css/formulario.css" rel="stylesheet" type="text/css">
+    <link href="/css/header.css" rel="stylesheet" type="text/css">
+    <link href="/css/footer.css" rel="stylesheet" type="text/css">
+    <link href="/css/adminList.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <%- include('../partials/headerNoneDeco.ejs') %> 
+  <main>
+    <h1 class="titulo">Crear Servicio </h1>
+      <form action="/admin/service/create" method="post">
+        <div class="column">
+          <label for="name">Nombre</label>
+          <input type="text" name="name" id="name" />
+        </div>
+        <div class="column">
+          <label for="desc">Descripcion</label>
+          <input type="text" name="desc" id="desc" />
+        </div>
+        <div class="column">
+          <label for="price">Precio</label>
+          <input type="text" name="price" id="price" />
+        </div>
+        <button type="submit">Crear</button>
+      </form>
+  </main>
+  <%- include('../partials/footer.ejs') %> 
+</body>
+</html>

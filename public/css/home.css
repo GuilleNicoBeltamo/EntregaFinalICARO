@@ -86,8 +86,8 @@ body {
     }
 
     #servicios div ul li img {
-        margin: 16px 16px;
-        border-radius: 8px;    
+        margin: 16px;
+        border-radius: 8px;   
     }
     #servicios div ul li h3 {
         color: var(--Color2-HyF);
@@ -117,7 +117,11 @@ body {
     #servicios div ul li div div img, #servicios div ul li div div a {
         color: white;
     }
-
+    #IMGServicios {
+        width: auto;
+        height: 300px;
+        object-fit: cover;
+    }
     /*--- About ---*/
     #about div {
         display: flex;
@@ -135,6 +139,7 @@ body {
         border-radius: 8px;
         padding: 8px 12px;
         width: 30%;
+        height: 320px;
         max-width: 480px;
     }
     #about div article img {
@@ -142,6 +147,8 @@ body {
         text-align: center;
         border-radius: 16px;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        max-width: 480px;
+        height: 250px;
     }
     #about div article p {
         text-align: center;

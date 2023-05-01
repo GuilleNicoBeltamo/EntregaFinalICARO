@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Te contamos mas...</title>
+        <link href="/css/header.css" rel="stylesheet" type="text/css">
+        <link href="/css/footer.css" rel="stylesheet" type="text/css">
+        <link href="/css/detailService.css" rel="stylesheet" type="text/css">
+    </head>
+    
+  <body>
+  
+    <%- include('../partials/headerNone.ejs') %> 
+  
+    <main>
+      <section class="section">
+        <div class="ProdctImg">
+          <img id="IMGServicios" src="/assets/Imag<%= existedService.id %>.jpg" />
+        </div>
+        <div>
+          <div class="nombrePrecio">
+            <h3 id="name"> <%= existedService.name %> </h3>
+            <h3>$  <%= existedService.price %> </h3>
+          </div>
+          <article class="descripcion">
+            <p id="Identificador"> <%= id %></p>
+            <p> <%= existedService.desc %>  </p>
+            <div>
+            <a href="/inicio-sesion" id="inicioSesion">
+              <h3>Iniciar Sesion para adquirir</h3>                  
+            </a>  
+            <a href="/" id="inicioSesion">
+              <h3>Volver</h3>                  
+            </a>  
+            </div>
+
+          </article>
+        </div>
+
+      </section>
+
+    </main>
+  
+    <%- include('../partials/footer.ejs') %> 
+    <script src="/js/detailSelectedIcon.js"></script>
+  </body>
+</html>

@@ -1,24 +1,23 @@
-const fs = require("fs");
+const ServiceList = require("../models/ServiceList");
 const path = require("path");
 
-const checkServiceID = (req, res, next) => {
+const checkServiceID = async (req, res, next) => {
 
-    const { id }  = req.params;
+    let { id }  = req.params;
+    id = Number(id)
+
     if (!id) {
         return res.status(404).sendFile(path.join(__dirname,"../../public/html/404.html"));
     }
 
-    const serviceFile = fs.readFileSync(path.join(__dirname,"../models/ServiceList.json"));
-    const services = JSON.parse(serviceFile);
-    const selectedService = services.find((current) => current.id === id);
+    const ListedServices = await ServiceList.findAll( {raw: true} );
+    let existedService = ListedServices.some((current) => current.id === id);
 
-    if (!selectedService) {
+    if (!existedService) {
         return res.status(404).sendFile(path.join(__dirname,"../../public/html/404.html"));
     }
 
-    //req.user = existedUser;
     next();
 };
-
 
 module.exports = { checkServiceID };

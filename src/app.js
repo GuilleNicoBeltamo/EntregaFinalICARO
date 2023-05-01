@@ -9,6 +9,9 @@ const cookieParser = require("cookie-parser");
 
 const app = express();
 
+const { testDb } = require("./models");
+testDb();
+
 // Configuraciones de la app
 // 1- Req-Body en formato JSON
 app.use(bodyParser.urlencoded({extended: true}));
@@ -45,6 +48,15 @@ app.use("/", Salida);
 
 const Carrito = require("./routes/Carrito")
 app.use("/", Carrito);
+
+const Admin = require("./routes/Admin")
+app.use("/", Admin);
+
+const localAPI = require("./routes/localAPI")
+app.use("/", localAPI);
+
+const Confirmacion = require("./routes/Confirmacion")
+app.use("/", Confirmacion);
 
 const Resto = require("./routes/Resto")
 app.use("/", Resto);

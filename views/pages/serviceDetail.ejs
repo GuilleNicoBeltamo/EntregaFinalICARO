@@ -14,18 +14,25 @@
     <main>
       <section class="section">
         <div class="ProdctImg">
-          <img src="https://picsum.photos/400/300" />
+          <img id="IMGServicios" src="/assets/Imag<%= existedService.id %>.jpg" />
         </div>
         <div>
           <div class="nombrePrecio">
-            <h3> <%= serviceList.name %> </h3>
-            <h3>$  <%= serviceList.price %> </h3>
+            <h3 id="name"> <%= existedService.name %> </h3>
+            <h3>$  <%= existedService.price %> </h3>
           </div>
           <article class="descripcion">
-            <p> <%= serviceList.desc %>  </p>
-            <a href="/carrito">
-              <img src="/assets/Compra-Logo.png" />
-            </a>  
+            <p id="Identificador"> <%= id %></p>
+            <p> <%= existedService.desc %>  </p>
+
+            <div>
+              <a href="" id="button">
+                <img id="carritoIcon" src="/assets/add-cart.svg" />                  
+              </a>  
+              <a href="/" id="inicioSesion">
+                <h3>Volver</h3>                  
+              </a>  
+            </div>
           </article>
         </div>
 
@@ -33,6 +40,6 @@
     </main>
   
     <%- include('../partials/footer.ejs') %> 
-  
+    <script src="/js/detailSelectedIcon.js"></script>
   </body>
 </html>

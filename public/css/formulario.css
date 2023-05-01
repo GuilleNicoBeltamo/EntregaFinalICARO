@@ -16,7 +16,7 @@ body {
     background-color: var(--Color3-Fondo);
 }
 main {
-    height: 85vh;
+    height: 100vh;
 }
 .welcome {
     text-align: center;
@@ -78,8 +78,11 @@ main form div {
 }
 main form div label {
     font-weight: bolder;
-    text-decoration: underline;
+    text-decoration: none;
     color: black;
+}
+main form div input {
+    width:15vw;
 }
 
 body main button {

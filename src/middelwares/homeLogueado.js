@@ -1,20 +1,17 @@
-const fs = require("fs");
-const path = require("path");
+const UserList = require("../models/UserList");
 
-const homeLogueado = (req, res, next) => {
+const homeLogueado = async (req, res, next) => {
 
     const { userID } = req.session;
-
-    const usersFile = fs.readFileSync(path.join(__dirname,"../models/user.json"));
-    const users = JSON.parse(usersFile);
-    const existedUser = users.find((current) => current.id === userID);
+    const registredUsers = await UserList.findAll( {raw:true} );
+    let existedUser = registredUsers.find((current) => current.id === userID);
     
+    //console.log("DATOS A MOSTRAR", existedUser)
+
     if (existedUser) {
         return res.redirect(`/user/${existedUser.id}`);
     }
-
     next();
-
 }
 
 module.exports = { homeLogueado };

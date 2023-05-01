@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Carrito de compras</title>
+    <link href="/css/header.css" rel="stylesheet" type="text/css">
+    <link href="/css/footer.css" rel="stylesheet" type="text/css">
+    <link href="/css/cart.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <%- include('../partials/headerLogueado.ejs') %> 
+    <main>
+      <section class="section">
+        <div class="intro" >
+        </div>
+        <h3> Ultimo paso <%= UserLogued.nameUser %>, verifiquemos que todos los datos sean correctos antes de continuar</h3>
+        <p>- Te enviaremos el comprobante de pago al siguiente correo: <%= UserLogued.correo %></p>
+        <p>- Los servicios que elegiste, su descripción y costo individual se listan mas abajo</p>
+        <p>- El valor final lo podes ver al final de la página</p>
+        <div class="subtotal" id="Primero">
+            <button type="submit">
+              <a href="/confirmacion%>" > Ir a pagar </a>
+            </button>
+          <p id="WAWAW">Total a pagar: $ 600</p>
+        </div>  
+
+
+
+      </section>
+    </main>
+    <%- include('../partials/footer.ejs') %> 
+    <script src="/js/listaCompra.js"></script>
+  </body>
+</html>

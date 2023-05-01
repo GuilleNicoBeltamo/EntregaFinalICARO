@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bienvenida!</title>
+    <link href="/css/home.css" rel="stylesheet" type="text/css">
+    <link href="/css/homeCarrusel.css" rel="stylesheet" type="text/css">
+    <link href="/css/header.css" rel="stylesheet" type="text/css">
+    <link href="/css/footer.css" rel="stylesheet" type="text/css">
+  </head>
+
+    <body>
+    <%- include('../partials/headerLogueado.ejs') %> 
+    <main>
+
+      <section class="section" id="inicio">
+        <h1>DiPro Rex: Soluciones de diseño</h1>
+        <p>
+          Hacemos posible tu idea
+        </p>
+      </section>
+
+      <section class="section" id="servicios">
+        <h2>¡ Bienvenida a la pagina del administrador... ! </h2>
+
+        <a href="http://localhost:8000/admin/service/create">
+          Agregar o quitar servicios
+        </a>
+        <a href="http://localhost:8000/admin/service/list">
+          Lista completa de servicios
+        </a>
+      </section>
+
+
+    </main>
+
+    <%- include('../partials/footer.ejs') %> 
+    
+    </body>
+</html>

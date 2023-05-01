@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registro</title>
+    <link href="/css/formulario.css" rel="stylesheet" type="text/css">
+    <link href="/css/header.css" rel="stylesheet" type="text/css">
+    <link href="/css/footer.css" rel="stylesheet" type="text/css">
+    <link href="/css/adminList.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <%- include('../partials/headerNoneDeco.ejs') %> 
+    <main>
+
+      <div class="actionButon">
+        <div>
+          <a href="http://localhost:8000/admin/service/create"> Crear nuevo (+) </a>
+        </div>
+        <br>
+        <div>      
+          <a href="http://localhost:8000/admin/service/delete"> Borrar (-) </a>
+        </div>
+        <br>
+        <div>      
+          <a href="http://localhost:8000/admin/service/edit"> Editar </a>
+        </div>
+      </div>
+
+      <div>
+        <h1 class="titulo">Servicios disponibles</h1>
+        <table>
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Nombre</th> 
+              <th>Descripcion</th>
+              <th>Precio</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% for(service of serviceListed) { %>
+            <tr>
+              <td><%= service.id %></td>
+              <td><%= service.name %></td>
+              <td><%= service.desc %></td>
+              <td><%= service.price %></td>
+            </tr>
+            <% } %>
+          </tbody>
+        </table>
+      </div>
+  </main>
+    <%- include('../partials/footer.ejs') %> 
+  </body>
+</html>

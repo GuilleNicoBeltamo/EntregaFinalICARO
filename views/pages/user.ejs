@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bienvenida!</title>
     <link href="/css/home.css" rel="stylesheet" type="text/css">
     <link href="/css/homeCarrusel.css" rel="stylesheet" type="text/css">
@@ -20,94 +23,28 @@
       </section>
 
       <section class="section" id="servicios">
-        <h2>¡ Bienvenida <%= UserLogued.user %> ! </h2>
+        <h2>¡ Bienvenida <%= UserLogued.nameUser %> ! </h2>
         <div>
-            <ul>
+          <ul>
+            <% cont = 0; %>
+            <% for(service of serviceListed) { %>
+            <% cont = cont+1; %>   
               <li>
-                <h3>Servicio 1</h3>
-                <img src="https://picsum.photos/400/300" />
+                <h3>Servicio <%= cont %>: <%= service.name %></h3>
+                <img id="IMGServicios" src="/assets/Imag<%= service.id %>.jpg" />
                 <div>
                   <div>
-                    <a href="/servicio/1">Saber mas</a>
+                    <a href="/servicio/ <%= service.id %>" >Saber mas</a>
                   </div>  
-                  <div>
-                    <a href="/carrito">
-                      <img src="/assets/Compra-Logo.png" />
+                  <div class="buttonCarrito">
+                    <a id="<%= cont %>" href="#">     
+                      <img class="carritoIcon" src="/assets/add-cart.svg" />                  
                     </a>
                   </div>
                 </div>
               </li>
-              <li>
-                <h3>Servicio 2</h3>
-                <img src="https://picsum.photos/400/300" />
-                <div>
-                  <div>
-                    <a href="/servicio/2">Saber mas</a>
-                  </div>  
-                  <div>
-                    <a href="/carrito">
-                      <img src="/assets/Compra-Logo.png" />
-                    </a>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <h3>Servicio 3</h3>
-                <img src="https://picsum.photos/400/300" />
-                <div>
-                  <div>
-                    <a href="/servicio/3">Saber mas</a>
-                  </div>  
-                  <div>
-                    <a href="/carrito">
-                      <img src="/assets/Compra-Logo.png" />
-                    </a>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <h3>Servicio 4</h3>
-                <img src="https://picsum.photos/400/300" />
-                <div>
-                  <div>
-                    <a href="/servicio/4">Saber mas</a>
-                  </div>  
-                  <div>
-                    <a href="/carrito">
-                      <img src="/assets/Compra-Logo.png" />
-                    </a>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <h3>Servicio 5</h3>
-                <img src="https://picsum.photos/400/300" />
-                <div>
-                  <div>
-                    <a href="/servicio/5">Saber mas</a>
-                  </div>  
-                  <div>
-                    <a href="/carrito">
-                      <img src="/assets/Compra-Logo.png" />
-                    </a>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <h3>Servicio 6</h3>
-                <img src="https://picsum.photos/400/300" />
-                <div>
-                  <div>
-                    <a href="/servicio/6">Saber mas</a>
-                  </div>  
-                  <div>
-                    <a href="/carrito">
-                      <img src="./assets/Compra-Logo.png" />
-                    </a>
-                  </div>
-                </div>
-              </li>
-            </ul>
+            <% } %>
+          </ul>
           </div>  
       </section>
 
@@ -115,24 +52,25 @@
         <h2>Sobre nosotros</h2>
         <div>
           <article>
-            <img src="https://picsum.photos/500/300" />
+            <img src="/assets/Nos1.jpeg" />
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Similique, id!
+              DiPro Rex nació en Córdoba en el 2022, como un deseo de sus
+              fundadores de poder materializar y condensar sus pasiones:
+              El diseño y la programación
             </p>
           </article>
           <article>
-            <img src="https://picsum.photos/500/300" />
+            <img src="/assets/Nos2.jpg" />
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Similique, id!
+              Pese a nuestra corta existencia como DiPro Rex, contamos con mas de 5
+              años de experiencia en el mundo del diseño, las redes y el Marketing
             </p>
           </article>
           <article>
-            <img src="https://picsum.photos/500/300" />
+            <img src="/assets/Nos3.jpeg" />
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Similique, id!
+              Actualmente brindamos servicios a emprendedores de toda Latinoamérica, con clientes
+              en Argentina, Uruguay y Paraguay
             </p>
           </article>
         </div>
@@ -180,7 +118,7 @@
 
       <section class="section" id="contact">
         <h2>Contactate con nosotros</h2>
-        <form action="" method="post">                        <!-- Envia los datos de formulario a una dirección en particular y con un metodo en especifico -->
+        <form action="mailto:gnbeltramo@gmail.com" method="post" enctype="text/plain">                        <!-- Envia los datos de formulario a una dirección en particular y con un metodo en especifico -->
           <input type="text" placeholder="Nombre" />
           <input type="email" placeholder="Email" required />
           <textarea required></textarea>
@@ -195,6 +133,6 @@
     </main>
 
     <%- include('../partials/footer.ejs') %> 
-    
+    <script src="/js/carrito2.js"></script>
     </body>
 </html>

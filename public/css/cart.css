@@ -135,6 +135,34 @@ button:hover {
 .subtotal button:active {
     font-weight: bold;
 }
+.arrepentimiento {
+    padding: 4px 8px;               /* Padding que agrega gaps enrte los elementos del Nav */
+    transition: all .5s;            /* Delay de 0.5s para los efectos */
+    cursor: pointer;                /* Para que el boton aplique a la lista y no solo al texto...  */
+    border-radius: 8px;
+    background-color: var(--Color3-Fondo);
+}
+.arrepentimiento:hover {
+    background-color: #0c3131;    /* Cambia el color de fondo */  
+}
+#Primero a {
+    transition: all .5s;            /* Delay de 0.5s para los efectos */
+    text-decoration: none;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-content: center;
+    background-color: #2F6673;
+    color: aliceblue;
+}
+#Primero a:hover {
+    background-color: #0c3131;    /* Cambia el color de fondo */  
+}
+#Primero a h3 {
+    padding: 8px 12px;
+    font-size: 17px;
+}
 
 @media (min-width: 1200px){              /*DESKTOP MEDIA*/
     main {
@@ -143,7 +171,7 @@ button:hover {
         justify-content: center;
         align-items: center;
         width: auto;
-        height: 1000px;
+        min-height: 100vh;
     }
     .section {
         display: flex;
@@ -166,6 +194,7 @@ button:hover {
     .intro p {
         font-weight: bold;
         text-decoration: underline;
+        font-size: 20px;
     }
     .productoSeleccionado {
         display: flex;
@@ -176,10 +205,10 @@ button:hover {
         border-radius: 8px;
         height: 100px;
         background-color: #F2E0D5;
+        width: 90%;
     }
     .productoSeleccionado img {
         max-width: 10%;
-        height: auto;
         border-radius: 8px;
         height: 90px;
     }
@@ -188,6 +217,7 @@ button:hover {
         flex-direction: column;
         align-items: flex-start;
         max-height: 100px;
+        width: 50%;
     }
     .contador {
         display: flex;
@@ -222,6 +252,7 @@ button:hover {
         flex-direction: column;
         justify-content: center;
         align-self: center;
+        width: 20%;
     }
     .precio p {
         background-color: #e0d9d4;
@@ -258,5 +289,33 @@ button:hover {
     }
     .subtotal button:active {
         font-weight: bold;
+    }
+    .arrepentimiento {
+        padding: 4px 8px;               /* Padding que agrega gaps enrte los elementos del Nav */
+        transition: all .5s;            /* Delay de 0.5s para los efectos */
+        cursor: pointer;                /* Para que el boton aplique a la lista y no solo al texto...  */
+        border-radius: 8px;
+        background-color: var(--Color3-Fondo);
+    }
+    .arrepentimiento:hover {
+        background-color: #0c3131;    /* Cambia el color de fondo */  
+    }
+    #Primero a {
+        transition: all .5s;            /* Delay de 0.5s para los efectos */
+        text-decoration: none;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-content: center;
+        background-color: #2F6673;
+        color: aliceblue;
+    }
+    #Primero a:hover {
+        background-color: #0c3131;    /* Cambia el color de fondo */  
+    }
+    #Primero a h3 {
+        padding: 8px 12px;
+        font-size: 17px;
     }
 }
